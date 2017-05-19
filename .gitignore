@@ -15,10 +15,16 @@ sso-server/target/*
 
 sso-client-org/target/*
 
-sso-core/target/classes/META-INF/MANIFEST.MF
-
 sso-client-user/target/*
 
 sso-server/.classpath
 
 sso-core/.classpath
+
+sso-client-user/target/classes/logback.xml
+
+sso-core/target/*
+
+sso-server/target/*
+
+sso-server/target/m2e-wtp/web-resources/META-INF/maven/com.hjz/sso-server/pom.xml

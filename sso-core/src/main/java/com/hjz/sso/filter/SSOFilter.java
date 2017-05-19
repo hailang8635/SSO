@@ -68,10 +68,10 @@ public class SSOFilter implements Filter{
 	private boolean verify(HttpServletRequest request, String verifyUrl, String token) {
 		String result = RestTemplateUtil.get(request, verifyUrl + "?token=" + token, null);
 		JSONObject ret = JSONObject.parseObject(result);
+		logger.error(request.getRequestURL().toString() + " : " + ret.getString("msg"));
 		if("success".equals(ret.getString("code"))) {
 			return true;
 		}
-		logger.error(request.getRequestURL().toString() + " : " + ret.getString("msg"));
 		return false;
 	}
 

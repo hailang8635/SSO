@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSONObject;
 
 @Controller
-@RequestMapping("sso")
+@RequestMapping("/sso")
 public class ValidateController {
 	
-	@RequestMapping("verify")
+	@RequestMapping("/verify")
 	@ResponseBody
 	public JSONObject verify(HttpServletRequest request, @RequestParam String token) {
 		HttpSession session = request.getSession();

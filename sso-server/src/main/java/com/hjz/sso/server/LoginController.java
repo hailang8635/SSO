@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("sso")
+@RequestMapping("/sso")
 public class LoginController {
 	private Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
-	@RequestMapping(value="login", method={RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value="/login", method={RequestMethod.GET, RequestMethod.POST})
 	public String login(HttpSession session, Model model,
 			@RequestParam(value="name", required=false) String name,
 			@RequestParam(value="password", required=false) String password) {
